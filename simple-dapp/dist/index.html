@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Simple dapp</title>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <!-- Display a connect button and the current account -->
+  <button class="enableEthereumButton btn">Enable Ethereum</button>
+  <button class="sendEthButton btn">Send ETH</button>
+  <h2>Account: <span class="showAccount"></span></h2>
+  <h2>Balance: <span class="showBalance"></span></h2>
+  <h3>Personal sign</h3>
+  <button type="button" id="personalSignButton">personal_sign</button>
+  <p> Result: <span id="personalSignResult"></span></p>
+  <button id="personalSignVerifyBtn" disabled> Verify </button>
+  <p> eth-sig-util recovery result: <span id="personalSignVerifySigUtilResult"></span></p>
+  <p> personal_ecRecover result: <span id="personalSignVerifyECRecoverResult"></span></p>
+  <h3>Smart Contract</h3>
+  <button id="lockBtn">Lock 1 ETH for 1 minute.</button>
+  <button id="unLockBtn">Unlock</button>
+  <p> - Lock TX Hash: <span id="lockTxHash"></span></p>
+  <p> - UnLock TX Hash: <span id="unlockTxHash"></span></p>
+  <h4>Listen event from Smart Contract</h4>
+  <button id="startListenBtn">Start Listening</button>
+  <p id="listenEventResult"></p>
+</body>
+</html>
+
